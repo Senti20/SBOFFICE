@@ -1,0 +1,1471 @@
+{
+  "generated_at": "2026-09-14T12:22:18+00:00",
+  "stats": {
+    "routes": 24,
+    "files": 57,
+    "by_type": {
+      "Controller": 8,
+      "Other": 44,
+      "Model": 3,
+      "Service": 2
+    },
+    "graph": {
+      "nodes": 83,
+      "edges": 101,
+      "by_type": {
+        "Route": 22,
+        "Controller": 10,
+        "Filesystem": 1,
+        "External": 1,
+        "Service": 7,
+        "Other": 37,
+        "Model": 4,
+        "Database": 1
+      }
+    },
+    "findings": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0,
+      "info": 0
+    },
+    "project_root": "C:\\xampp\\htdocs\\Capstone"
+  },
+  "findings": [],
+  "graph": {
+    "nodes": [
+      {
+        "id": "route:GET:/",
+        "type": "Route",
+        "name": "GET /",
+        "file": "routes\\web.php",
+        "line": 11,
+        "meta": {
+          "action": "PortalDocumentController@index"
+        }
+      },
+      {
+        "id": "controller:PortalDocumentController",
+        "type": "Controller",
+        "name": "PortalDocumentController",
+        "file": "",
+        "line": 0,
+        "meta": {}
+      },
+      {
+        "id": "route:GET:/documents/{document}/file",
+        "type": "Route",
+        "name": "GET /documents/{document}/file",
+        "file": "routes\\web.php",
+        "line": 12,
+        "meta": {
+          "action": "PortalDocumentController@file"
+        }
+      },
+      {
+        "id": "route:GET:/requests/create",
+        "type": "Route",
+        "name": "GET /requests/create",
+        "file": "routes\\web.php",
+        "line": 14,
+        "meta": {
+          "action": "PortalRequestController@create"
+        }
+      },
+      {
+        "id": "controller:PortalRequestController",
+        "type": "Controller",
+        "name": "PortalRequestController",
+        "file": "",
+        "line": 0,
+        "meta": {}
+      },
+      {
+        "id": "route:POST:/requests",
+        "type": "Route",
+        "name": "POST /requests",
+        "file": "routes\\web.php",
+        "line": 15,
+        "meta": {
+          "action": "PortalRequestController@store"
+        }
+      },
+      {
+        "id": "route:GET:/requests/list",
+        "type": "Route",
+        "name": "GET /requests/list",
+        "file": "routes\\web.php",
+        "line": 18,
+        "meta": {
+          "action": "PortalRequestController@index"
+        }
+      },
+      {
+        "id": "route:PATCH:/requests/{request}/cancel",
+        "type": "Route",
+        "name": "PATCH /requests/{request}/cancel",
+        "file": "routes\\web.php",
+        "line": 19,
+        "meta": {
+          "action": "PortalRequestController@cancel"
+        }
+      },
+      {
+        "id": "route:DELETE:/requests/{request}",
+        "type": "Route",
+        "name": "DELETE /requests/{request}",
+        "file": "routes\\web.php",
+        "line": 20,
+        "meta": {
+          "action": "PortalRequestController@destroy"
+        }
+      },
+      {
+        "id": "route:GET:/requests/track",
+        "type": "Route",
+        "name": "GET /requests/track",
+        "file": "routes\\web.php",
+        "line": 23,
+        "meta": {
+          "action": "PortalRequestController@trackingForm"
+        }
+      },
+      {
+        "id": "route:POST:/requests/track",
+        "type": "Route",
+        "name": "POST /requests/track",
+        "file": "routes\\web.php",
+        "line": 24,
+        "meta": {
+          "action": "PortalRequestController@track"
+        }
+      },
+      {
+        "id": "route:GET:/requests/{request}/success",
+        "type": "Route",
+        "name": "GET /requests/{request}/success",
+        "file": "routes\\web.php",
+        "line": 27,
+        "meta": {
+          "action": "PortalRequestController@success"
+        }
+      },
+      {
+        "id": "route:GET:/admin/login",
+        "type": "Route",
+        "name": "GET /admin/login",
+        "file": "routes\\web.php",
+        "line": 30,
+        "meta": {
+          "action": "LoginController@create"
+        }
+      },
+      {
+        "id": "controller:LoginController",
+        "type": "Controller",
+        "name": "LoginController",
+        "file": "",
+        "line": 0,
+        "meta": {}
+      },
+      {
+        "id": "route:POST:/admin/login",
+        "type": "Route",
+        "name": "POST /admin/login",
+        "file": "routes\\web.php",
+        "line": 31,
+        "meta": {
+          "action": "LoginController@store"
+        }
+      },
+      {
+        "id": "route:POST:/admin/logout",
+        "type": "Route",
+        "name": "POST /admin/logout",
+        "file": "routes\\web.php",
+        "line": 36,
+        "meta": {
+          "action": "LoginController@destroy"
+        }
+      },
+      {
+        "id": "route:GET:/dashboard",
+        "type": "Route",
+        "name": "GET /dashboard",
+        "file": "routes\\web.php",
+        "line": 42,
+        "meta": {
+          "action": "DashboardController@index"
+        }
+      },
+      {
+        "id": "controller:DashboardController",
+        "type": "Controller",
+        "name": "DashboardController",
+        "file": "",
+        "line": 0,
+        "meta": {}
+      },
+      {
+        "id": "route:GET:/documents",
+        "type": "Route",
+        "name": "GET /documents",
+        "file": "routes\\web.php",
+        "line": 44,
+        "meta": {
+          "action": "AdminDocumentController@index"
+        }
+      },
+      {
+        "id": "controller:AdminDocumentController",
+        "type": "Controller",
+        "name": "AdminDocumentController",
+        "file": "",
+        "line": 0,
+        "meta": {}
+      },
+      {
+        "id": "route:GET:/documents/create",
+        "type": "Route",
+        "name": "GET /documents/create",
+        "file": "routes\\web.php",
+        "line": 45,
+        "meta": {
+          "action": "AdminDocumentController@create"
+        }
+      },
+      {
+        "id": "route:POST:/documents",
+        "type": "Route",
+        "name": "POST /documents",
+        "file": "routes\\web.php",
+        "line": 46,
+        "meta": {
+          "action": "AdminDocumentController@store"
+        }
+      },
+      {
+        "id": "route:GET:/documents/{document}/edit",
+        "type": "Route",
+        "name": "GET /documents/{document}/edit",
+        "file": "routes\\web.php",
+        "line": 47,
+        "meta": {
+          "action": "AdminDocumentController@edit"
+        }
+      },
+      {
+        "id": "route:POST:/documents/{document}",
+        "type": "Route",
+        "name": "POST /documents/{document}",
+        "file": "routes\\web.php",
+        "line": 48,
+        "meta": {
+          "action": "AdminDocumentController@update"
+        }
+      },
+      {
+        "id": "route:DELETE:/documents/{document}",
+        "type": "Route",
+        "name": "DELETE /documents/{document}",
+        "file": "routes\\web.php",
+        "line": 49,
+        "meta": {
+          "action": "AdminDocumentController@destroy"
+        }
+      },
+      {
+        "id": "route:GET:/requests",
+        "type": "Route",
+        "name": "GET /requests",
+        "file": "routes\\web.php",
+        "line": 52,
+        "meta": {
+          "action": "AdminRequestController@index"
+        }
+      },
+      {
+        "id": "controller:AdminRequestController",
+        "type": "Controller",
+        "name": "AdminRequestController",
+        "file": "",
+        "line": 0,
+        "meta": {}
+      },
+      {
+        "id": "route:PUT:/requests/{documentRequest}",
+        "type": "Route",
+        "name": "PUT /requests/{documentRequest}",
+        "file": "routes\\web.php",
+        "line": 53,
+        "meta": {
+          "action": "AdminRequestController@update"
+        }
+      },
+      {
+        "id": "controller:DocumentController",
+        "type": "Controller",
+        "name": "DocumentController",
+        "file": "app\\Http\\Controllers\\Admin\\DocumentController.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "storage:Storage",
+        "type": "Filesystem",
+        "name": "Storage",
+        "file": "",
+        "line": 0,
+        "meta": {}
+      },
+      {
+        "id": "controller:RequestController",
+        "type": "Controller",
+        "name": "RequestController",
+        "file": "app\\Http\\Controllers\\Admin\\RequestController.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "http:Http",
+        "type": "External",
+        "name": "Http",
+        "file": "",
+        "line": 0,
+        "meta": {}
+      },
+      {
+        "id": "log:Log",
+        "type": "Service",
+        "name": "Log",
+        "file": "",
+        "line": 0,
+        "meta": {}
+      },
+      {
+        "id": "auth:Auth",
+        "type": "Service",
+        "name": "Auth",
+        "file": "",
+        "line": 0,
+        "meta": {}
+      },
+      {
+        "id": "controller:Controller",
+        "type": "Controller",
+        "name": "Controller",
+        "file": "app\\Http\\Controllers\\Controller.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:EnsureAdmin",
+        "type": "Other",
+        "name": "EnsureAdmin",
+        "file": "app\\Http\\Middleware\\EnsureAdmin.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "model:Document",
+        "type": "Model",
+        "name": "Document",
+        "file": "app\\Models\\Document.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "model:DocumentType",
+        "type": "Model",
+        "name": "DocumentType",
+        "file": "app\\Models\\DocumentType.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "model:Request",
+        "type": "Model",
+        "name": "Request",
+        "file": "app\\Models\\Request.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:User",
+        "type": "Other",
+        "name": "User",
+        "file": "app\\Models\\User.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "service:AppServiceProvider",
+        "type": "Service",
+        "name": "AppServiceProvider",
+        "file": "app\\Providers\\AppServiceProvider.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "service:DocumentService",
+        "type": "Service",
+        "name": "DocumentService",
+        "file": "app\\Services\\DocumentService.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "db:DB",
+        "type": "Database",
+        "name": "DB",
+        "file": "",
+        "line": 0,
+        "meta": {}
+      },
+      {
+        "id": "str:Str",
+        "type": "Service",
+        "name": "Str",
+        "file": "",
+        "line": 0,
+        "meta": {}
+      },
+      {
+        "id": "other:app",
+        "type": "Other",
+        "name": "app",
+        "file": "bootstrap\\app.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:packages",
+        "type": "Other",
+        "name": "packages",
+        "file": "bootstrap\\cache\\packages.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:services",
+        "type": "Other",
+        "name": "services",
+        "file": "bootstrap\\cache\\services.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:providers",
+        "type": "Other",
+        "name": "providers",
+        "file": "bootstrap\\providers.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:auth",
+        "type": "Other",
+        "name": "auth",
+        "file": "config\\auth.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "model:User",
+        "type": "Model",
+        "name": "User",
+        "file": "",
+        "line": 0,
+        "meta": {}
+      },
+      {
+        "id": "other:broadcasting",
+        "type": "Other",
+        "name": "broadcasting",
+        "file": "config\\broadcasting.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:cache",
+        "type": "Other",
+        "name": "cache",
+        "file": "config\\cache.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:database",
+        "type": "Other",
+        "name": "database",
+        "file": "config\\database.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:filesystems",
+        "type": "Other",
+        "name": "filesystems",
+        "file": "config\\filesystems.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:hashing",
+        "type": "Other",
+        "name": "hashing",
+        "file": "config\\hashing.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:logging",
+        "type": "Other",
+        "name": "logging",
+        "file": "config\\logging.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:mail",
+        "type": "Other",
+        "name": "mail",
+        "file": "config\\mail.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:queue",
+        "type": "Other",
+        "name": "queue",
+        "file": "config\\queue.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:session",
+        "type": "Other",
+        "name": "session",
+        "file": "config\\session.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:UserFactory",
+        "type": "Other",
+        "name": "UserFactory",
+        "file": "database\\factories\\UserFactory.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:0001_01_01_000000_create_users_table",
+        "type": "Other",
+        "name": "0001_01_01_000000_create_users_table",
+        "file": "database\\migrations\\0001_01_01_000000_create_users_table.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "schema:Schema",
+        "type": "Service",
+        "name": "Schema",
+        "file": "",
+        "line": 0,
+        "meta": {}
+      },
+      {
+        "id": "other:0001_01_01_000001_create_cache_table",
+        "type": "Other",
+        "name": "0001_01_01_000001_create_cache_table",
+        "file": "database\\migrations\\0001_01_01_000001_create_cache_table.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:0001_01_01_000002_create_jobs_table",
+        "type": "Other",
+        "name": "0001_01_01_000002_create_jobs_table",
+        "file": "database\\migrations\\0001_01_01_000002_create_jobs_table.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:2026_09_10_000002_create_document_types_table",
+        "type": "Other",
+        "name": "2026_09_10_000002_create_document_types_table",
+        "file": "database\\migrations\\2026_09_10_000002_create_document_types_table.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:2026_09_10_000003_create_documents_table",
+        "type": "Other",
+        "name": "2026_09_10_000003_create_documents_table",
+        "file": "database\\migrations\\2026_09_10_000003_create_documents_table.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:2026_09_10_000004_create_requests_table",
+        "type": "Other",
+        "name": "2026_09_10_000004_create_requests_table",
+        "file": "database\\migrations\\2026_09_10_000004_create_requests_table.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:DatabaseSeeder",
+        "type": "Other",
+        "name": "DatabaseSeeder",
+        "file": "database\\seeders\\DatabaseSeeder.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:dashboard.blade",
+        "type": "Other",
+        "name": "dashboard.blade",
+        "file": "resources\\views\\admin\\dashboard.blade.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:create.blade",
+        "type": "Other",
+        "name": "create.blade",
+        "file": "resources\\views\\admin\\documents\\create.blade.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:edit.blade",
+        "type": "Other",
+        "name": "edit.blade",
+        "file": "resources\\views\\admin\\documents\\edit.blade.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:index.blade",
+        "type": "Other",
+        "name": "index.blade",
+        "file": "resources\\views\\admin\\documents\\index.blade.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:login.blade",
+        "type": "Other",
+        "name": "login.blade",
+        "file": "resources\\views\\auth\\login.blade.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:admin.blade",
+        "type": "Other",
+        "name": "admin.blade",
+        "file": "resources\\views\\layouts\\admin.blade.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:public.blade",
+        "type": "Other",
+        "name": "public.blade",
+        "file": "resources\\views\\layouts\\public.blade.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:success.blade",
+        "type": "Other",
+        "name": "success.blade",
+        "file": "resources\\views\\public\\requests\\success.blade.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:welcome.blade",
+        "type": "Other",
+        "name": "welcome.blade",
+        "file": "resources\\views\\welcome.blade.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "route:Route",
+        "type": "Service",
+        "name": "Route",
+        "file": "",
+        "line": 0,
+        "meta": {}
+      },
+      {
+        "id": "other:console",
+        "type": "Other",
+        "name": "console",
+        "file": "routes\\console.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "controller:web",
+        "type": "Controller",
+        "name": "web",
+        "file": "routes\\web.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:ExampleTest",
+        "type": "Other",
+        "name": "ExampleTest",
+        "file": "tests\\Feature\\ExampleTest.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:PortalTest",
+        "type": "Other",
+        "name": "PortalTest",
+        "file": "tests\\Feature\\PortalTest.php",
+        "line": 1,
+        "meta": {}
+      },
+      {
+        "id": "other:TestCase",
+        "type": "Other",
+        "name": "TestCase",
+        "file": "tests\\TestCase.php",
+        "line": 1,
+        "meta": {}
+      }
+    ],
+    "edges": [
+      {
+        "from": "route:GET:/",
+        "to": "controller:PortalDocumentController",
+        "kind": "CALLS",
+        "label": "PortalDocumentController@index",
+        "meta": {}
+      },
+      {
+        "from": "route:GET:/documents/{document}/file",
+        "to": "controller:PortalDocumentController",
+        "kind": "CALLS",
+        "label": "PortalDocumentController@file",
+        "meta": {}
+      },
+      {
+        "from": "route:GET:/requests/create",
+        "to": "controller:PortalRequestController",
+        "kind": "CALLS",
+        "label": "PortalRequestController@create",
+        "meta": {}
+      },
+      {
+        "from": "route:POST:/requests",
+        "to": "controller:PortalRequestController",
+        "kind": "CALLS",
+        "label": "PortalRequestController@store",
+        "meta": {}
+      },
+      {
+        "from": "route:GET:/requests/list",
+        "to": "controller:PortalRequestController",
+        "kind": "CALLS",
+        "label": "PortalRequestController@index",
+        "meta": {}
+      },
+      {
+        "from": "route:PATCH:/requests/{request}/cancel",
+        "to": "controller:PortalRequestController",
+        "kind": "CALLS",
+        "label": "PortalRequestController@cancel",
+        "meta": {}
+      },
+      {
+        "from": "route:DELETE:/requests/{request}",
+        "to": "controller:PortalRequestController",
+        "kind": "CALLS",
+        "label": "PortalRequestController@destroy",
+        "meta": {}
+      },
+      {
+        "from": "route:GET:/requests/track",
+        "to": "controller:PortalRequestController",
+        "kind": "CALLS",
+        "label": "PortalRequestController@trackingForm",
+        "meta": {}
+      },
+      {
+        "from": "route:POST:/requests/track",
+        "to": "controller:PortalRequestController",
+        "kind": "CALLS",
+        "label": "PortalRequestController@track",
+        "meta": {}
+      },
+      {
+        "from": "route:GET:/requests/{request}/success",
+        "to": "controller:PortalRequestController",
+        "kind": "CALLS",
+        "label": "PortalRequestController@success",
+        "meta": {}
+      },
+      {
+        "from": "route:GET:/admin/login",
+        "to": "controller:LoginController",
+        "kind": "CALLS",
+        "label": "LoginController@create",
+        "meta": {}
+      },
+      {
+        "from": "route:POST:/admin/login",
+        "to": "controller:LoginController",
+        "kind": "CALLS",
+        "label": "LoginController@store",
+        "meta": {}
+      },
+      {
+        "from": "route:POST:/admin/logout",
+        "to": "controller:LoginController",
+        "kind": "CALLS",
+        "label": "LoginController@destroy",
+        "meta": {}
+      },
+      {
+        "from": "route:GET:/dashboard",
+        "to": "controller:DashboardController",
+        "kind": "CALLS",
+        "label": "DashboardController@index",
+        "meta": {}
+      },
+      {
+        "from": "route:GET:/documents",
+        "to": "controller:AdminDocumentController",
+        "kind": "CALLS",
+        "label": "AdminDocumentController@index",
+        "meta": {}
+      },
+      {
+        "from": "route:GET:/documents/create",
+        "to": "controller:AdminDocumentController",
+        "kind": "CALLS",
+        "label": "AdminDocumentController@create",
+        "meta": {}
+      },
+      {
+        "from": "route:POST:/documents",
+        "to": "controller:AdminDocumentController",
+        "kind": "CALLS",
+        "label": "AdminDocumentController@store",
+        "meta": {}
+      },
+      {
+        "from": "route:GET:/documents/{document}/edit",
+        "to": "controller:AdminDocumentController",
+        "kind": "CALLS",
+        "label": "AdminDocumentController@edit",
+        "meta": {}
+      },
+      {
+        "from": "route:POST:/documents/{document}",
+        "to": "controller:AdminDocumentController",
+        "kind": "CALLS",
+        "label": "AdminDocumentController@update",
+        "meta": {}
+      },
+      {
+        "from": "route:DELETE:/documents/{document}",
+        "to": "controller:AdminDocumentController",
+        "kind": "CALLS",
+        "label": "AdminDocumentController@destroy",
+        "meta": {}
+      },
+      {
+        "from": "route:GET:/documents/{document}/file",
+        "to": "controller:AdminDocumentController",
+        "kind": "CALLS",
+        "label": "AdminDocumentController@file",
+        "meta": {}
+      },
+      {
+        "from": "route:GET:/requests",
+        "to": "controller:AdminRequestController",
+        "kind": "CALLS",
+        "label": "AdminRequestController@index",
+        "meta": {}
+      },
+      {
+        "from": "route:PUT:/requests/{documentRequest}",
+        "to": "controller:AdminRequestController",
+        "kind": "CALLS",
+        "label": "AdminRequestController@update",
+        "meta": {}
+      },
+      {
+        "from": "controller:DocumentController",
+        "to": "storage:Storage",
+        "kind": "DEPENDS_ON",
+        "label": "Storage::",
+        "meta": {}
+      },
+      {
+        "from": "controller:DocumentController",
+        "to": "storage:Storage",
+        "kind": "DEPENDS_ON",
+        "label": "Storage::",
+        "meta": {}
+      },
+      {
+        "from": "controller:DocumentController",
+        "to": "storage:Storage",
+        "kind": "DEPENDS_ON",
+        "label": "Storage::",
+        "meta": {}
+      },
+      {
+        "from": "controller:DocumentController",
+        "to": "storage:Storage",
+        "kind": "DEPENDS_ON",
+        "label": "Storage::",
+        "meta": {}
+      },
+      {
+        "from": "controller:RequestController",
+        "to": "http:Http",
+        "kind": "DEPENDS_ON",
+        "label": "Http::",
+        "meta": {}
+      },
+      {
+        "from": "controller:RequestController",
+        "to": "log:Log",
+        "kind": "DEPENDS_ON",
+        "label": "Log::",
+        "meta": {}
+      },
+      {
+        "from": "controller:LoginController",
+        "to": "auth:Auth",
+        "kind": "DEPENDS_ON",
+        "label": "Auth::",
+        "meta": {}
+      },
+      {
+        "from": "controller:LoginController",
+        "to": "auth:Auth",
+        "kind": "DEPENDS_ON",
+        "label": "Auth::",
+        "meta": {}
+      },
+      {
+        "from": "controller:LoginController",
+        "to": "auth:Auth",
+        "kind": "DEPENDS_ON",
+        "label": "Auth::",
+        "meta": {}
+      },
+      {
+        "from": "controller:DocumentController",
+        "to": "storage:Storage",
+        "kind": "DEPENDS_ON",
+        "label": "Storage::",
+        "meta": {}
+      },
+      {
+        "from": "controller:DocumentController",
+        "to": "storage:Storage",
+        "kind": "DEPENDS_ON",
+        "label": "Storage::",
+        "meta": {}
+      },
+      {
+        "from": "controller:RequestController",
+        "to": "http:Http",
+        "kind": "DEPENDS_ON",
+        "label": "Http::",
+        "meta": {}
+      },
+      {
+        "from": "controller:RequestController",
+        "to": "log:Log",
+        "kind": "DEPENDS_ON",
+        "label": "Log::",
+        "meta": {}
+      },
+      {
+        "from": "controller:RequestController",
+        "to": "http:Http",
+        "kind": "DEPENDS_ON",
+        "label": "Http::",
+        "meta": {}
+      },
+      {
+        "from": "controller:RequestController",
+        "to": "log:Log",
+        "kind": "DEPENDS_ON",
+        "label": "Log::",
+        "meta": {}
+      },
+      {
+        "from": "controller:RequestController",
+        "to": "storage:Storage",
+        "kind": "DEPENDS_ON",
+        "label": "Storage::",
+        "meta": {}
+      },
+      {
+        "from": "controller:RequestController",
+        "to": "storage:Storage",
+        "kind": "DEPENDS_ON",
+        "label": "Storage::",
+        "meta": {}
+      },
+      {
+        "from": "service:DocumentService",
+        "to": "db:DB",
+        "kind": "DEPENDS_ON",
+        "label": "DB::",
+        "meta": {}
+      },
+      {
+        "from": "service:DocumentService",
+        "to": "str:Str",
+        "kind": "DEPENDS_ON",
+        "label": "Str::",
+        "meta": {}
+      },
+      {
+        "from": "service:DocumentService",
+        "to": "str:Str",
+        "kind": "DEPENDS_ON",
+        "label": "Str::",
+        "meta": {}
+      },
+      {
+        "from": "service:DocumentService",
+        "to": "str:Str",
+        "kind": "DEPENDS_ON",
+        "label": "Str::",
+        "meta": {}
+      },
+      {
+        "from": "service:DocumentService",
+        "to": "storage:Storage",
+        "kind": "DEPENDS_ON",
+        "label": "Storage::",
+        "meta": {}
+      },
+      {
+        "from": "service:DocumentService",
+        "to": "storage:Storage",
+        "kind": "DEPENDS_ON",
+        "label": "Storage::",
+        "meta": {}
+      },
+      {
+        "from": "other:auth",
+        "to": "model:User",
+        "kind": "WRITES",
+        "label": "User",
+        "meta": {}
+      },
+      {
+        "from": "other:0001_01_01_000000_create_users_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:0001_01_01_000000_create_users_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:0001_01_01_000000_create_users_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:0001_01_01_000000_create_users_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:0001_01_01_000000_create_users_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:0001_01_01_000000_create_users_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:0001_01_01_000001_create_cache_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:0001_01_01_000001_create_cache_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:0001_01_01_000001_create_cache_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:0001_01_01_000001_create_cache_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:0001_01_01_000002_create_jobs_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:0001_01_01_000002_create_jobs_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:0001_01_01_000002_create_jobs_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:0001_01_01_000002_create_jobs_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:0001_01_01_000002_create_jobs_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:0001_01_01_000002_create_jobs_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:2026_09_10_000002_create_document_types_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:2026_09_10_000002_create_document_types_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:2026_09_10_000003_create_documents_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:2026_09_10_000003_create_documents_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:2026_09_10_000004_create_requests_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:2026_09_10_000004_create_requests_table",
+        "to": "schema:Schema",
+        "kind": "DEPENDS_ON",
+        "label": "Schema::",
+        "meta": {}
+      },
+      {
+        "from": "other:DatabaseSeeder",
+        "to": "model:User",
+        "kind": "WRITES",
+        "label": "User",
+        "meta": {}
+      },
+      {
+        "from": "other:DatabaseSeeder",
+        "to": "str:Str",
+        "kind": "DEPENDS_ON",
+        "label": "Str::",
+        "meta": {}
+      },
+      {
+        "from": "other:DatabaseSeeder",
+        "to": "storage:Storage",
+        "kind": "DEPENDS_ON",
+        "label": "Storage::",
+        "meta": {}
+      },
+      {
+        "from": "other:DatabaseSeeder",
+        "to": "storage:Storage",
+        "kind": "DEPENDS_ON",
+        "label": "Storage::",
+        "meta": {}
+      },
+      {
+        "from": "other:welcome.blade",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "other:welcome.blade",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      },
+      {
+        "from": "controller:web",
+        "to": "route:Route",
+        "kind": "DEPENDS_ON",
+        "label": "Route::",
+        "meta": {}
+      }
+    ],
+    "stats": {
+      "nodes": 83,
+      "edges": 101,
+      "by_type": {
+        "Route": 22,
+        "Controller": 10,
+        "Filesystem": 1,
+        "External": 1,
+        "Service": 7,
+        "Other": 37,
+        "Model": 4,
+        "Database": 1
+      }
+    }
+  }
+}
